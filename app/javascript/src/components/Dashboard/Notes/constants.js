@@ -15,21 +15,6 @@ export const VALIDATION_SCHEMA = yup.object().shape({
     .required(t("validations.required", { entity: t("common.description") })),
 });
 
-export const COLUMN_DATA = [
-  {
-    title: t("common.title"),
-    dataIndex: "title",
-    key: "title",
-    width: "30%",
-  },
-  {
-    title: t("common.description"),
-    dataIndex: "description",
-    key: "description",
-    width: "70%",
-  },
-];
-
 export const MENUBAR_MAIN_BLOCK_DATA = [
   {
     label: t("menuBar.blockLabels.all"),
