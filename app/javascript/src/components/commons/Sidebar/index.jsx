@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Sidebar as NeetoUISidebar } from "neetoui/layouts";
+import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
 import authenticationApi from "apis/authentication";
@@ -11,6 +12,7 @@ import {
 } from "components/routeConstants";
 import { useAuthDispatch } from "contexts/auth";
 import { useUserState } from "contexts/user";
+import AppLogoImage from "images/AppLogo";
 
 import { APP_NAME, SIDENAV_LINKS } from "./constants";
 
@@ -18,6 +20,8 @@ const Sidebar = () => {
   const history = useHistory();
   const authDispatch = useAuthDispatch();
   const { user } = useUserState();
+
+  const { t } = useTranslation();
 
   const handleLogout = async () => {
     try {
@@ -31,15 +35,15 @@ const Sidebar = () => {
 
   const bottomLinks = [
     {
-      label: "My profile",
+      label: t("sideBar.bottomLinkLabels.myProfile"),
       onClick: () => history.push(PROFILE_PATH, { resetTab: true }),
     },
     {
-      label: "Change password",
+      label: t("sideBar.bottomLinkLabels.changePassword"),
       onClick: () => history.push(CHANGE_PASSWORD_PATH, { resetTab: true }),
     },
     {
-      label: "Logout",
+      label: t("sideBar.bottomLinkLabels.logout"),
       onClick: handleLogout,
     },
   ];
@@ -50,8 +54,9 @@ const Sidebar = () => {
       changelogProps={{ id: "neetochangelog-trigger" }}
       navLinks={SIDENAV_LINKS}
       organizationInfo={{
-        name: "Wheel",
+        name: t("common.applicationName"),
         subdomain: "bigbinary.com",
+        logo: <AppLogoImage />,
       }}
       profileInfo={{
         name: `${user.first_name} ${user.last_name}`,
