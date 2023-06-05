@@ -4,16 +4,19 @@ import { Clock } from "neetoicons";
 import { Typography, Avatar, Tooltip, Tag } from "neetoui";
 import { useTranslation } from "react-i18next";
 
-import { USER_DETAILS } from "./constants";
+import {
+  getElapsedTimeFromNow,
+  getFormattedDayAndTime,
+} from "components/Dashboard/Notes/utils";
 
-import { getElapsedTimeFromNow, getFormattedDayAndTime } from "../../utils";
+import { USER_DETAILS } from "./constants";
 
 const Footer = ({ createdAt }) => {
   const { t } = useTranslation();
 
   return (
     <div className="flex justify-between">
-      <Tag label="Getting Started" style="secondary" type="solid" />
+      <Tag label={t("common.gettingStarted")} style="secondary" type="solid" />
       <Tooltip
         content={getFormattedDayAndTime(createdAt)}
         position="bottom-end"

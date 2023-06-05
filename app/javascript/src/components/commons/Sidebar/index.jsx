@@ -12,7 +12,7 @@ import {
 } from "components/routeConstants";
 import { useAuthDispatch } from "contexts/auth";
 import { useUserState } from "contexts/user";
-import AppLogoImage from "images/AppLogo";
+import AppLogo from "images/AppLogo";
 
 import { APP_NAME, SIDENAV_LINKS } from "./constants";
 
@@ -56,7 +56,7 @@ const Sidebar = () => {
       organizationInfo={{
         name: t("common.applicationName"),
         subdomain: "bigbinary.com",
-        logo: <AppLogoImage />,
+        logo: <AppLogo />,
       }}
       profileInfo={{
         name: `${user.first_name} ${user.last_name}`,
