@@ -1,0 +1,61 @@
+{
+  "common": {
+    "applicationName": "Wheel",
+    "title": "Title",
+    "description": "Description",
+    "notes": "Notes",
+    "allNotes": "All Notes",
+    "gettingStarted": "Getting Started",
+    "createdAgo": "Created {{time}}",
+    "edit": "Edit",
+    "delete": "Delete",
+    "newNoteTitle": "Create a new note",
+    "update": "Update",
+    "saveChanges": "Save changes",
+    "cancel": "Cancel"
+  },
+  "menuBar": {
+    "subTitles": {
+      "segments": "Segments",
+      "tags": "Tags"
+    },
+    "blockLabels": {
+      "all": "All",
+      "users": "Users",
+      "leads": "Leads",
+      "visitors": "Visitors",
+      "europe": "Europe",
+      "middleEast": "Middle-East",
+      "asia": "Asia",
+      "sales": "Sales",
+      "finance": "Finance",
+      "userExperience": "User Experience"
+    }
+  },
+  "sideBar": {
+    "notes": "Notes",
+    "contacts": "Contacts",
+    "settings": "Settings",
+    "bottomLinkLabels": {
+      "myProfile": "My profile",
+      "changePassword": "Change password",
+      "logout": "Logout"
+    }
+  },
+  "validations": {
+    "required": "{{entity}} is required"
+  },
+  "buttonLabels": {
+    "addNote": "Add Note",
+    "addNewNote": "Add new note"
+  },
+  "placeholders": {
+    "searchNameEmail": "Search Name, Email, Phone Number, Etc."
+  },
+  "emptyState": {
+    "notes": {
+      "subtitle": "Add your notes to send customized emails to them.",
+      "title": "Looks like you don't have any notes!"
+    }
+  }
+}
