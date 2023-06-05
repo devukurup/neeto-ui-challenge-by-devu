@@ -3,12 +3,15 @@ import React from "react";
 import { Formik, Form as FormikForm } from "formik";
 import { Button, Pane } from "neetoui";
 import { Input, Textarea } from "neetoui/formik";
+import { useTranslation } from "react-i18next";
 
 import notesApi from "apis/notes";
 
-import { NOTES_FORM_VALIDATION_SCHEMA } from "../constants";
+import { VALIDATION_SCHEMA } from "../constants";
 
 const Form = ({ onClose, refetch, note, isEdit }) => {
+  const { t } = useTranslation();
+
   const handleSubmit = async values => {
     try {
       if (isEdit) {
@@ -26,7 +29,7 @@ const Form = ({ onClose, refetch, note, isEdit }) => {
   return (
     <Formik
       initialValues={note}
-      validationSchema={NOTES_FORM_VALIDATION_SCHEMA}
+      validationSchema={VALIDATION_SCHEMA}
       onSubmit={handleSubmit}
     >
       {({ isSubmitting }) => (
@@ -35,13 +38,13 @@ const Form = ({ onClose, refetch, note, isEdit }) => {
             <Input
               required
               className="w-full flex-grow-0"
-              label="Title"
+              label={t("common.title")}
               name="title"
             />
             <Textarea
               required
               className="w-full flex-grow-0"
-              label="Description"
+              label={t("common.description")}
               name="description"
               rows={8}
             />
@@ -50,12 +53,12 @@ const Form = ({ onClose, refetch, note, isEdit }) => {
             <Button
               className="mr-3"
               disabled={isSubmitting}
-              label={isEdit ? "Update" : "Save changes"}
+              label={isEdit ? t("common.update") : t("common.saveChanges")}
               loading={isSubmitting}
               style="primary"
               type="submit"
             />
-            <Button label="Cancel" style="text" onClick={onClose} />
+            <Button label={t("common.cancel")} style="text" onClick={onClose} />
           </Pane.Footer>
         </FormikForm>
       )}
