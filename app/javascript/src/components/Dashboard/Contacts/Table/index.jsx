@@ -8,17 +8,12 @@ import { isOdd, isPresent, noop } from "utils";
 
 import EmptyState from "components/commons/EmptyState";
 
-import {
-  DEFAULT_PAGE_SIZE,
-  INITIAL_PAGE_NUMBER,
-  SAMPLE_CONTACTS,
-} from "./constants";
-import { columnData } from "./utils";
+import { DEFAULT_PAGE_SIZE, INITIAL_PAGE_NUMBER } from "./constants";
 
-const Table = () => {
-  const [currentPage, setCurrentPage] = useState(INITIAL_PAGE_NUMBER);
+const Table = ({ rowData, columnData }) => {
+  const [currentPageNumber, setCurrentPageNumber] =
+    useState(INITIAL_PAGE_NUMBER);
   const [selectedRowIds, setSelectedRowIds] = useState([]);
-  const rowData = SAMPLE_CONTACTS;
 
   const { t } = useTranslation();
 
@@ -29,13 +24,15 @@ const Table = () => {
           fixedHeight
           rowSelection
           bordered={false}
-          columnData={columnData(noop)}
-          currentPageNumber={currentPage}
+          columnData={columnData}
+          currentPageNumber={currentPageNumber}
           defaultPageSize={DEFAULT_PAGE_SIZE}
-          handlePageChange={nextPage => setCurrentPage(nextPage)}
           rowData={rowData}
           selectedRowKeys={selectedRowIds}
           totalCount={rowData.length}
+          handlePageChange={nextPageNumber =>
+            setCurrentPageNumber(nextPageNumber)
+          }
           rowClassName={(_, index) =>
             classnames({ "neeto-ui-bg-gray-100": isOdd(index) })
           }

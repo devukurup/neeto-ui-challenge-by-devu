@@ -24,7 +24,8 @@
     "v2": "V2",
     "allContacts": "All Contacts",
     "contact_one": "Contact",
-    "contact_other": "Contacts"
+    "contact_other": "Contacts",
+    "owner": "Owner"
   },
   "menuBar": {
     "subTitles": {

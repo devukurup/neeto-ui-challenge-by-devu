@@ -4,12 +4,15 @@ import { Plus } from "neetoicons";
 import { Button } from "neetoui";
 import { Container, Header } from "neetoui/layouts";
 import { useTranslation } from "react-i18next";
+import { noop } from "utils";
 
 import MenuBar from "components/commons/MenuBar";
 import { PLURAL } from "constants";
 
 import { MENUBAR_BLOCK_DATA } from "./constants";
 import Table from "./Table";
+import { SAMPLE_CONTACTS } from "./Table/constants";
+import { columnData } from "./Table/utils";
 
 const Contacts = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -39,11 +42,11 @@ const Contacts = () => {
           }
           searchProps={{
             value: searchTerm,
-            onChange: e => setSearchTerm(e.target.value),
+            onChange: event => setSearchTerm(event.target.value),
             placeholder: t("placeholders.searchNameEmail"),
           }}
         />
-        <Table rowData={[]} />
+        <Table columnData={columnData(noop)} rowData={SAMPLE_CONTACTS} />
       </Container>
     </div>
   );

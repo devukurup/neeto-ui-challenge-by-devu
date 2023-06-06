@@ -21,7 +21,7 @@ export const columnData = handleDelete => [
             {name}
           </Typography>
           <Typography style="body3" weight="normal">
-            Owner
+            {t("common.owner")}
           </Typography>
         </div>
       </div>
