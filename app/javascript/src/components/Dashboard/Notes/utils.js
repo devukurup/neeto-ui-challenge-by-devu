@@ -1,8 +1,5 @@
 import dayjs from "dayjs";
-import relativeTime from "dayjs/plugin/relativeTime";
 
-dayjs.extend(relativeTime);
+export const getElapsedTime = date => dayjs(date).fromNow();
 
-export const getElapsedTimeFromNow = date => dayjs(date).fromNow();
-
-export const getFormattedDayAndTime = date => dayjs(date).format("dddd, h A");
+export const formatDate = date => dayjs(date).format("dddd, h A");
