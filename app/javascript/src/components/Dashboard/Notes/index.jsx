@@ -17,6 +17,8 @@ import DeleteAlert from "./DeleteAlert";
 import List from "./List";
 import NewNotePane from "./Pane/Create";
 
+import { PLURAL } from "../constants";
+
 const Notes = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isNewNotePaneOpen, setIsNewNotePaneOpen] = useState(false);
@@ -62,7 +64,7 @@ const Notes = () => {
         mainBlocks={MENUBAR_MAIN_BLOCK_DATA}
         segmentBlocks={MENUBAR_SEGMENTS_BLOCK_DATA}
         tagBlocks={MENUBAR_TAGS_BLOCK_DATA}
-        title={t("common.notes")}
+        title={t("common.note", PLURAL)}
       />
       <Container>
         <Header

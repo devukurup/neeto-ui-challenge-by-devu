@@ -1,6 +1,8 @@
 import { t } from "i18next";
 import { Inbox, Text, UserCircle } from "neetoicons";
 
+import { PLURAL } from "components/Dashboard/constants";
+
 export const APP_NAME = "Wheel";
 
 export const PASSWORD_PATH = "/my/password/edit";
@@ -9,7 +11,7 @@ export const LOGOUT_PATH = "/logout";
 
 export const SIDENAV_LINKS = [
   {
-    label: t("common.notes"),
+    label: t("common.note", PLURAL),
     to: "/notes",
     icon: Text,
   },

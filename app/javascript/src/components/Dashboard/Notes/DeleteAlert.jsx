@@ -5,6 +5,8 @@ import { useTranslation } from "react-i18next";
 
 import notesApi from "apis/notes";
 
+import { SINGULAR } from "../constants";
+
 const DeleteAlert = ({
   refetch,
   onClose,
@@ -34,8 +36,10 @@ const DeleteAlert = ({
     <Alert
       isOpen={isOpen}
       isSubmitting={isDeleting}
-      message={t("alert.message", { entity: t("common.note") })}
-      title={t("alert.title", { entity: t("common.note") })}
+      title={t("alert.title", { entity: t("common.note", SINGULAR) })}
+      message={t("alert.message", {
+        entity: t("common.note", SINGULAR).toLowerCase(),
+      })}
       onClose={onClose}
       onSubmit={handleDelete}
     />
