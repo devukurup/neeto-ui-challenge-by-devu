@@ -106,8 +106,8 @@
   },
   "toastr": {
     "success": {
-      "created": "{{entity}} added successfully",
-      "deleted": "{{entity}} deleted successfully"
+      "created": "{{entity}} added successfully.",
+      "deleted": "{{entity}} deleted successfully."
     }
   }
 }
