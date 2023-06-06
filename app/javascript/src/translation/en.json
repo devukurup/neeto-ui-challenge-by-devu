@@ -21,7 +21,10 @@
     "userFlow": "User Flow",
     "ux": "UX",
     "bugs": "Bugs",
-    "v2": "V2"
+    "v2": "V2",
+    "allContacts": "All Contacts",
+    "contact_one": "Contact",
+    "contact_other": "Contacts"
   },
   "menuBar": {
     "subTitles": {
@@ -37,7 +40,10 @@
       "asia": "Asia",
       "sales": "Sales",
       "finance": "Finance",
-      "userExperience": "User Experience"
+      "userExperience": "User Experience",
+      "archived": "Archived",
+      "completed": "Completed",
+      "phase2": "Phase 2"
     }
   },
   "sideBar": {
@@ -56,7 +62,8 @@
   },
   "buttonLabels": {
     "addNote": "Add Note",
-    "addNewNote": "Add new note"
+    "addNewNote": "Add new note",
+    "addContact": "Add Contact"
   },
   "placeholders": {
     "searchNameEmail": "Search Name, Email, Phone Number, Etc.",

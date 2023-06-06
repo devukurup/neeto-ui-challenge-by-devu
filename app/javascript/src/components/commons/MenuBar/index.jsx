@@ -13,8 +13,8 @@ const { Block, SubTitle } = NeetoUIMenuBar;
 const MenuBar = ({
   title,
   mainBlocks,
-  segmentBlocks,
-  tagBlocks,
+  segmentBlocks = [],
+  tagBlocks = [],
   isMenuBarOpen,
 }) => {
   const { t } = useTranslation();
@@ -34,7 +34,7 @@ const MenuBar = ({
           {t("menuBar.subTitles.segments")}
         </Typography>
       </SubTitle>
-      {segmentBlocks.map(({ label, isActive, count }) => (
+      {segmentBlocks?.map(({ label, isActive, count }) => (
         <Block active={isActive} count={count} key={label} label={label} />
       ))}
       <SubTitle iconProps={TAGS_ICON_PROPS}>
@@ -47,7 +47,7 @@ const MenuBar = ({
           {t("common.tag", PLURAL)}
         </Typography>
       </SubTitle>
-      {tagBlocks.map(({ label, isActive, count }) => (
+      {tagBlocks?.map(({ label, isActive, count }) => (
         <Block active={isActive} count={count} key={label} label={label} />
       ))}
     </NeetoUIMenuBar>
