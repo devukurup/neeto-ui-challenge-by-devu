@@ -95,3 +95,41 @@ export const MENUBAR_TAGS_BLOCK_DATA = [
     count: 60,
   },
 ];
+
+export const TAG_OPTIONS = [
+  {
+    label: t("common.gettingStarted"),
+    value: "getting_started",
+  },
+  {
+    label: t("common.onboarding"),
+    value: "onboarding",
+  },
+  {
+    label: t("common.userFlow"),
+    value: "user_flow",
+  },
+  {
+    label: t("common.ux"),
+    value: "ux",
+  },
+  {
+    label: t("common.bugs"),
+    value: "bugs",
+  },
+  {
+    label: t("common.v2"),
+    value: "v2",
+  },
+];
+
+export const CONTACT_OPTIONS = [
+  {
+    label: "Oliver Smith",
+    value: "oliver_smith",
+  },
+  {
+    label: "Sam Smith",
+    value: "sam_smith",
+  },
+];

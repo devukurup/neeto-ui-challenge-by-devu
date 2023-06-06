@@ -93,8 +93,8 @@ const Notes = () => {
         />
         <NewNotePane
           fetchNotes={fetchNotes}
-          setShowPane={setIsNewNotePaneOpen}
-          showPane={isNewNotePaneOpen}
+          isPaneOpen={isNewNotePaneOpen}
+          onClose={() => setIsNewNotePaneOpen(false)}
         />
         <DeleteAlert
           isOpen={isDeleteAlertOpen}
