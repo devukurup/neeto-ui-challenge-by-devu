@@ -1,9 +1,13 @@
 import { t } from "i18next";
 import * as yup from "yup";
 
+import { SINGULAR } from "../constants";
+
 export const INITIAL_FORM_VALUES = {
   title: "",
   description: "",
+  assignedContact: null,
+  tags: [],
 };
 
 export const VALIDATION_SCHEMA = yup.object().shape({
@@ -13,6 +17,24 @@ export const VALIDATION_SCHEMA = yup.object().shape({
   description: yup
     .string()
     .required(t("validations.required", { entity: t("common.description") })),
+  assignedContact: yup
+    .object()
+    .shape({ label: yup.string(), value: yup.string() })
+    .nullable()
+    .required(
+      t("validations.required", { entity: t("common.assignedContact") })
+    ),
+  tags: yup
+    .array()
+    .of(yup.object().shape({ label: yup.string(), value: yup.string() }))
+    .min(
+      1,
+      t("validations.minimum", {
+        value: 1,
+        entity: t("common.tag", SINGULAR),
+      })
+    )
+    .required(t("validations.required", { entity: t("common.tag", SINGULAR) })),
 });
 
 export const MENUBAR_MAIN_BLOCK_DATA = [
