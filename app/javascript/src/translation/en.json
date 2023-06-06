@@ -21,7 +21,11 @@
     "userFlow": "User Flow",
     "ux": "UX",
     "bugs": "Bugs",
-    "v2": "V2"
+    "v2": "V2",
+    "allContacts": "All Contacts",
+    "contact_one": "Contact",
+    "contact_other": "Contacts",
+    "owner": "Owner"
   },
   "menuBar": {
     "subTitles": {
@@ -37,7 +41,10 @@
       "asia": "Asia",
       "sales": "Sales",
       "finance": "Finance",
-      "userExperience": "User Experience"
+      "userExperience": "User Experience",
+      "archived": "Archived",
+      "completed": "Completed",
+      "phase2": "Phase 2"
     }
   },
   "sideBar": {
@@ -56,7 +63,8 @@
   },
   "buttonLabels": {
     "addNote": "Add Note",
-    "addNewNote": "Add new note"
+    "addNewNote": "Add new note",
+    "addContact": "Add Contact"
   },
   "placeholders": {
     "searchNameEmail": "Search Name, Email, Phone Number, Etc.",
@@ -69,10 +77,18 @@
     "notes": {
       "subtitle": "Add your notes to send customized emails to them.",
       "title": "Looks like you don't have any notes!"
+    },
+    "contacts": {
+      "title": "Looks like you don't have any contacts!"
     }
   },
   "alert": {
     "title": "Delete {{entity}}",
     "message": "Are you sure you want to delete the {{entity}}? This action cannot be undone."
+  },
+  "table": {
+    "nameAndRole": "Name & Role",
+    "email": "Email",
+    "createdAt": "Created At"
   }
 }
