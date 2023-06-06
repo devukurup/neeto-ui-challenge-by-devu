@@ -23,9 +23,7 @@ const Contacts = () => {
 
   const { t } = useTranslation();
 
-  const handleDelete = () => {
-    setIsDeleteAlertOpen(true);
-  };
+  const handleDelete = () => setIsDeleteAlertOpen(true);
 
   return (
     <div className="flex w-full">

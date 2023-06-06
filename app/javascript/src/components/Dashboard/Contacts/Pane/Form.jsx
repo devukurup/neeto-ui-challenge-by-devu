@@ -28,7 +28,7 @@ const Form = ({ onClose, initialValues }) => {
       onSubmit={handleSubmit}
     >
       {({ isSubmitting }) => (
-        <FormikForm noValidate className="w-full">
+        <FormikForm noValidate>
           <Pane.Body className="space-y-7">
             <div className="flex w-full space-x-3">
               <Input
