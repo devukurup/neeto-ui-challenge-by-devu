@@ -3,7 +3,6 @@
     "applicationName": "Wheel",
     "title": "Title",
     "description": "Description",
-    "notes": "Notes",
     "allNotes": "All Notes",
     "gettingStarted": "Getting Started",
     "createdAgo": "Created {{time}}",
@@ -12,7 +11,9 @@
     "newNoteTitle": "Create a new note",
     "update": "Update",
     "saveChanges": "Save changes",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "note_one": "Note",
+    "note_other": "Notes"
   },
   "menuBar": {
     "subTitles": {
@@ -57,5 +58,9 @@
       "subtitle": "Add your notes to send customized emails to them.",
       "title": "Looks like you don't have any notes!"
     }
+  },
+  "alert": {
+    "title": "Delete {{entity}}",
+    "message": "Are you sure you want to delete the {{entity}}? This action cannot be undone."
   }
 }
