@@ -10,7 +10,7 @@
     "delete": "Delete",
     "newNoteTitle": "Create a new note",
     "update": "Update",
-    "saveChanges": "Save changes",
+    "saveChanges": "Save Changes",
     "cancel": "Cancel",
     "note_one": "Note",
     "note_other": "Notes",
@@ -25,7 +25,12 @@
     "allContacts": "All Contacts",
     "contact_one": "Contact",
     "contact_other": "Contacts",
-    "owner": "Owner"
+    "owner": "Owner",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email Address",
+    "role": "Role",
+    "admin": "Admin"
   },
   "menuBar": {
     "subTitles": {
@@ -59,7 +64,8 @@
   },
   "validations": {
     "required": "{{entity}} is required",
-    "minimum": "Atleast {{value}} {{entity}} is required"
+    "minimum": "Atleast {{value}} {{entity}} is required",
+    "invalidEmail": "Email address must be valid"
   },
   "buttonLabels": {
     "addNote": "Add Note",
@@ -71,7 +77,11 @@
     "title": "Enter note title",
     "description": "Enter note description",
     "assignedContact": "Select contact",
-    "tags": "Select tags"
+    "tags": "Select tags",
+    "firstName": "Enter first name",
+    "lastName": "Enter last name",
+    "email": "Enter your email address",
+    "role": "Select Role"
   },
   "emptyState": {
     "notes": {
@@ -90,5 +100,14 @@
     "nameAndRole": "Name & Role",
     "email": "Email",
     "createdAt": "Created At"
+  },
+  "pane": {
+    "title": "Add new {{entity}}"
+  },
+  "toastr": {
+    "success": {
+      "created": "{{entity}} added successfully",
+      "deleted": "{{entity}} deleted successfully"
+    }
   }
 }

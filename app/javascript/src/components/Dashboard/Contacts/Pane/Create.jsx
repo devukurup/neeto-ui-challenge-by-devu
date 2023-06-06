@@ -5,11 +5,10 @@ import { useTranslation } from "react-i18next";
 
 import { SINGULAR } from "constants";
 
+import { INITIAL_VALUES } from "./constants";
 import Form from "./Form";
 
-import { INITIAL_FORM_VALUES } from "../constants";
-
-const Create = ({ fetchNotes, isOpen, onClose }) => {
+const Create = ({ isOpen, onClose }) => {
   const { t } = useTranslation();
 
   return (
@@ -17,15 +16,11 @@ const Create = ({ fetchNotes, isOpen, onClose }) => {
       <Pane.Header>
         <Typography style="h2" weight="semibold">
           {t("pane.title", {
-            entity: t("common.note", SINGULAR).toLowerCase(),
+            entity: t("common.contact", SINGULAR).toLowerCase(),
           })}
         </Typography>
       </Pane.Header>
-      <Form
-        initialValues={INITIAL_FORM_VALUES}
-        refetch={fetchNotes}
-        onClose={onClose}
-      />
+      <Form initialValues={INITIAL_VALUES} onClose={onClose} />
     </Pane>
   );
 };
