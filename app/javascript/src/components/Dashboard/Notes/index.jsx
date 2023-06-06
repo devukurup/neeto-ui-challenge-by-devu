@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 
 import notesApi from "apis/notes";
 import MenuBar from "components/commons/MenuBar";
+import { PLURAL } from "constants";
 
 import {
   MENUBAR_MAIN_BLOCK_DATA,
@@ -16,8 +17,6 @@ import {
 import DeleteAlert from "./DeleteAlert";
 import List from "./List";
 import NewNotePane from "./Pane/Create";
-
-import { PLURAL } from "../constants";
 
 const Notes = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -93,7 +92,7 @@ const Notes = () => {
         />
         <NewNotePane
           fetchNotes={fetchNotes}
-          isPaneOpen={isNewNotePaneOpen}
+          isOpen={isNewNotePaneOpen}
           onClose={() => setIsNewNotePaneOpen(false)}
         />
         <DeleteAlert

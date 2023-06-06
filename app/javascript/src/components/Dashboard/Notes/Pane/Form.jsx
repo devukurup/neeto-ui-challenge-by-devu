@@ -7,7 +7,7 @@ import { Input, Textarea, Select } from "neetoui/formik";
 import { useTranslation } from "react-i18next";
 
 import notesApi from "apis/notes";
-import { PLURAL } from "components/Dashboard/constants";
+import { PLURAL } from "constants";
 
 import { CONTACT_OPTIONS, VALIDATION_SCHEMA, TAG_OPTIONS } from "../constants";
 

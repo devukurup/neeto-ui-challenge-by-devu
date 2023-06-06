@@ -7,11 +7,11 @@ import Form from "./Form";
 
 import { INITIAL_FORM_VALUES } from "../constants";
 
-const Create = ({ fetchNotes, isPaneOpen, onClose }) => {
+const Create = ({ fetchNotes, isOpen, onClose }) => {
   const { t } = useTranslation();
 
   return (
-    <Pane isOpen={isPaneOpen} onClose={onClose}>
+    <Pane isOpen={isOpen} onClose={onClose}>
       <Pane.Header>
         <Typography style="h2" weight="semibold">
           {t("common.newNoteTitle")}

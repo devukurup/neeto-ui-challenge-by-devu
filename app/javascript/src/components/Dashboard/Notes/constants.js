@@ -1,7 +1,7 @@
 import { t } from "i18next";
 import * as yup from "yup";
 
-import { SINGULAR } from "../constants";
+import { SINGULAR } from "constants";
 
 export const INITIAL_FORM_VALUES = {
   title: "",

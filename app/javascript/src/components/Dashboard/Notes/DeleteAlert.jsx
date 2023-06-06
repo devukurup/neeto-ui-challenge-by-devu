@@ -4,8 +4,7 @@ import { Alert } from "neetoui";
 import { useTranslation } from "react-i18next";
 
 import notesApi from "apis/notes";
-
-import { SINGULAR } from "../constants";
+import { SINGULAR } from "constants";
 
 const DeleteAlert = ({
   refetch,
