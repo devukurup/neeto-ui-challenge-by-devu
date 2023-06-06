@@ -4,6 +4,8 @@ import { Typography } from "neetoui";
 import { MenuBar as NeetoUIMenuBar } from "neetoui/layouts";
 import { useTranslation } from "react-i18next";
 
+import { PLURAL } from "constants";
+
 import { SEGMENTS_ICON_PROPS, TAGS_ICON_PROPS } from "./constants";
 
 const { Block, SubTitle } = NeetoUIMenuBar;
@@ -42,7 +44,7 @@ const MenuBar = ({
           textTransform="uppercase"
           weight="bold"
         >
-          {t("menuBar.subTitles.tags")}
+          {t("common.tag", PLURAL)}
         </Typography>
       </SubTitle>
       {tagBlocks.map(({ label, isActive, count }) => (

@@ -1,7 +1,7 @@
 import { t } from "i18next";
 import { Inbox, Text, UserCircle } from "neetoicons";
 
-import { PLURAL } from "components/Dashboard/constants";
+import { PLURAL } from "constants";
 
 export const APP_NAME = "Wheel";
 

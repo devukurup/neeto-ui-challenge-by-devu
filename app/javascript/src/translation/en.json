@@ -13,12 +13,19 @@
     "saveChanges": "Save changes",
     "cancel": "Cancel",
     "note_one": "Note",
-    "note_other": "Notes"
+    "note_other": "Notes",
+    "assignedContact": "Assigned Contact",
+    "tag_one": "Tag",
+    "tag_other": "Tags",
+    "onboarding": "Onboarding",
+    "userFlow": "User Flow",
+    "ux": "UX",
+    "bugs": "Bugs",
+    "v2": "V2"
   },
   "menuBar": {
     "subTitles": {
-      "segments": "Segments",
-      "tags": "Tags"
+      "segments": "Segments"
     },
     "blockLabels": {
       "all": "All",
@@ -44,14 +51,19 @@
     }
   },
   "validations": {
-    "required": "{{entity}} is required"
+    "required": "{{entity}} is required",
+    "minimum": "Atleast {{value}} {{entity}} is required"
   },
   "buttonLabels": {
     "addNote": "Add Note",
     "addNewNote": "Add new note"
   },
   "placeholders": {
-    "searchNameEmail": "Search Name, Email, Phone Number, Etc."
+    "searchNameEmail": "Search Name, Email, Phone Number, Etc.",
+    "title": "Enter note title",
+    "description": "Enter note description",
+    "assignedContact": "Select contact",
+    "tags": "Select tags"
   },
   "emptyState": {
     "notes": {
