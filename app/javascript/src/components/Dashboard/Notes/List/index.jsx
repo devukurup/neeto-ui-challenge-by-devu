@@ -1,14 +1,14 @@
 import React from "react";
 
+import EmptyNotesListImage from "images/EmptyNotesList";
 import { useTranslation } from "react-i18next";
 import { isPresent } from "utils";
 
 import EmptyState from "components/commons/EmptyState";
-import EmptyNotesListImage from "images/EmptyNotesList";
 
 import Card from "./Card";
 
-const List = ({ notes, setIsNewNotePaneOpen }) => {
+const List = ({ notes, setIsNewNotePaneOpen, handleDelete }) => {
   const { t } = useTranslation();
 
   return (
@@ -19,6 +19,8 @@ const List = ({ notes, setIsNewNotePaneOpen }) => {
             <Card
               createdAt={created_at}
               description={description}
+              handleDelete={handleDelete}
+              id={id}
               key={id}
               title={title}
             />

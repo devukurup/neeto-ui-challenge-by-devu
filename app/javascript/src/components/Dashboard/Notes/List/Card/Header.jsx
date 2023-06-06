@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 
 const { Menu, MenuItem } = Dropdown;
 
-const Header = ({ title }) => {
+const Header = ({ title, handleDelete, id }) => {
   const { t } = useTranslation();
 
   return (
@@ -17,7 +17,9 @@ const Header = ({ title }) => {
       <Dropdown buttonStyle="text" icon={MenuVertical}>
         <Menu>
           <MenuItem.Button>{t("common.edit")}</MenuItem.Button>
-          <MenuItem.Button style="danger">{t("common.delete")}</MenuItem.Button>
+          <MenuItem.Button style="danger" onClick={() => handleDelete(id)}>
+            {t("common.delete")}
+          </MenuItem.Button>
         </Menu>
       </Dropdown>
     </div>

@@ -22,7 +22,7 @@ const Notes = () => {
   const [isNewNotePaneOpen, setIsNewNotePaneOpen] = useState(false);
   const [isDeleteAlertOpen, setIsDeleteAlertOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedNoteIds, setSelectedNoteIds] = useState([]);
+  const [selectedNoteId, setSelectedNoteId] = useState(-1);
   const [notes, setNotes] = useState([]);
   const [isMenuBarOpen, setIsMenuBarOpen] = useState(true);
 
@@ -44,6 +44,11 @@ const Notes = () => {
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const handleDelete = id => {
+    setSelectedNoteId(id);
+    setIsDeleteAlertOpen(true);
   };
 
   if (isLoading) {
@@ -79,20 +84,23 @@ const Notes = () => {
             placeholder: t("placeholders.searchNameEmail"),
           }}
         />
-        <List notes={notes} setIsNewNotePaneOpen={setIsNewNotePaneOpen} />
+        <List
+          handleDelete={handleDelete}
+          notes={notes}
+          setIsNewNotePaneOpen={setIsNewNotePaneOpen}
+        />
         <NewNotePane
           fetchNotes={fetchNotes}
           setShowPane={setIsNewNotePaneOpen}
           showPane={isNewNotePaneOpen}
         />
-        {isDeleteAlertOpen && (
-          <DeleteAlert
-            refetch={fetchNotes}
-            selectedNoteIds={selectedNoteIds}
-            setSelectedNoteIds={setSelectedNoteIds}
-            onClose={() => setIsDeleteAlertOpen(false)}
-          />
-        )}
+        <DeleteAlert
+          isOpen={isDeleteAlertOpen}
+          refetch={fetchNotes}
+          selectedNoteId={selectedNoteId}
+          setSelectedNoteId={setSelectedNoteId}
+          onClose={() => setIsDeleteAlertOpen(false)}
+        />
       </Container>
     </div>
   );
