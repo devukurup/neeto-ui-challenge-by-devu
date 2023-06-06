@@ -76,10 +76,18 @@
     "notes": {
       "subtitle": "Add your notes to send customized emails to them.",
       "title": "Looks like you don't have any notes!"
+    },
+    "contacts": {
+      "title": "Looks like you don't have any contacts!"
     }
   },
   "alert": {
     "title": "Delete {{entity}}",
     "message": "Are you sure you want to delete the {{entity}}? This action cannot be undone."
+  },
+  "table": {
+    "nameAndRole": "Name & Role",
+    "email": "Email",
+    "createdAt": "Created At"
   }
 }

@@ -1,4 +1,4 @@
-const USER_IMAGE_URL = "https://i.pravatar.cc/300";
+import { USER_IMAGE_URL } from "components/Dashboard/constants";
 
 export const USER_DETAILS = {
   name: "Oliver Smith",
