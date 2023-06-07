@@ -27,16 +27,14 @@ const Table = ({ rowData, columnData, setIsContactPaneOpen }) => {
           columnData={columnData}
           currentPageNumber={currentPageNumber}
           defaultPageSize={DEFAULT_PAGE_SIZE}
+          handlePageChange={setCurrentPageNumber}
           rowData={rowData}
           selectedRowKeys={selectedRowIds}
           totalCount={rowData.length}
-          handlePageChange={nextPageNumber =>
-            setCurrentPageNumber(nextPageNumber)
-          }
           rowClassName={(_, index) =>
             classnames({ "neeto-ui-bg-gray-100": isOdd(index) })
           }
-          onRowSelect={ids => setSelectedRowIds(ids)}
+          onRowSelect={setSelectedRowIds}
         />
       ) : (
         <EmptyState
